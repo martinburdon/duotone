@@ -1,8 +1,8 @@
-import Head from "next/head";
-import { ThemeProvider, CSSReset } from "@chakra-ui/core";
-import { Global, css } from "@emotion/core";
+import Head from 'next/head';
+import { ThemeProvider, CSSReset } from '@chakra-ui/core';
+import { Global, css } from '@emotion/core';
 
-import customTheme from "@/styles/theme";
+import customTheme from '@/styles/theme';
 
 const GlobalStyle = ({ children }) => {
   return (
@@ -19,6 +19,7 @@ const GlobalStyle = ({ children }) => {
 
           #__next {
             background: #090c14;
+            color: #fff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
