@@ -25,8 +25,8 @@ const StyledImage = styled(Image)`
 
 const DuoImage = ({
   src,
-  color1 = '#f32959',
-  color2 = '#1d3162',
+  color1,
+  color2,
   contrast = 1,
   mixBlendMode = 'darken'
 }) => {
