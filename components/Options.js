@@ -6,7 +6,7 @@ const Options = ({ setColor1, color1, setColor2, color2 }) => {
   const onChangeColor2 = (color) => setColor2(color.hex);
 
   return (
-    <Flex flexDirection="column">
+    <Flex flexDirection="column" justifyContent="center" alignItems="center">
       <Flex flexDirection="column">
         <Heading as="h2">Color 1</Heading>
         <SketchPicker color={color1} onChange={onChangeColor1} />
