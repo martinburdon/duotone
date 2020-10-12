@@ -1,4 +1,4 @@
-import { Flex, Image } from '@chakra-ui/core';
+import { Box, Flex, Image } from '@chakra-ui/core';
 import styled from '@emotion/styled';
 
 const StyledContainer = styled(Flex)`
@@ -31,14 +31,15 @@ const DuoImage = ({
   mixBlendMode = 'darken'
 }) => {
   return (
-    <StyledContainer
-      color1={color1}
-      color2={color2}
-      justifyContent="center"
-      w="100%"
-    >
-      <StyledImage contrast={contrast} mixBlendMode={mixBlendMode} src={src} />
-    </StyledContainer>
+    <Flex justifyContent="center">
+      <StyledContainer color1={color1} color2={color2} justifyContent="center">
+        <StyledImage
+          contrast={contrast}
+          mixBlendMode={mixBlendMode}
+          src={src}
+        />
+      </StyledContainer>
+    </Flex>
   );
 };
 
