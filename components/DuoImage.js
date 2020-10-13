@@ -19,25 +19,14 @@ const StyledContainer = styled(Flex)`
 
 const StyledImage = styled(Image)`
   filter: grayscale(100%) contrast(${(props) => props.contrast});
-  mix-blend-mode: ${(props) =>
-    props.mixBlendMode}; // TODO Config multiply, darken, lighten
+  mix-blend-mode: ${(props) => props.blendMode};
 `;
 
-const DuoImage = ({
-  src,
-  color1,
-  color2,
-  contrast = 1,
-  mixBlendMode = 'darken'
-}) => {
+const DuoImage = ({ src, color1, color2, contrast = 1, blendMode }) => {
   return (
     <Flex justifyContent="center">
       <StyledContainer color1={color1} color2={color2} justifyContent="center">
-        <StyledImage
-          contrast={contrast}
-          mixBlendMode={mixBlendMode}
-          src={src}
-        />
+        <StyledImage contrast={contrast} blendMode={blendMode} src={src} />
       </StyledContainer>
     </Flex>
   );

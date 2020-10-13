@@ -9,6 +9,7 @@ export default function Home() {
   );
   const [color1, setColor1] = useState('#f32959');
   const [color2, setColor2] = useState('#1d3162');
+  const [blendMode, setBlendMode] = useState('darken');
 
   return (
     <Grid
@@ -20,12 +21,19 @@ export default function Home() {
       </Flex>
       <Flex flexDirection="column">
         <ImageSrc imageSrc={imageSrc} setImageSrc={setImageSrc} />
-        <DuoImage color1={color1} color2={color2} src={imageSrc} />
-        <Options
-          setColor1={setColor1}
+        <DuoImage
+          blendMode={blendMode}
           color1={color1}
-          setColor2={setColor2}
           color2={color2}
+          src={imageSrc}
+        />
+        <Options
+          blendMode={blendMode}
+          setBlendMode={setBlendMode}
+          color1={color1}
+          setColor1={setColor1}
+          color2={color2}
+          setColor2={setColor2}
         />
       </Flex>
     </Grid>
