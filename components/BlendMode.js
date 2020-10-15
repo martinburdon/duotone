@@ -1,35 +1,29 @@
-import { Button, Flex, Text } from '@chakra-ui/core';
+import { Button, Flex } from '@chakra-ui/core';
 
-const BlendMode = ({ blendMode, setBlendMode }) => {
+const BlendModeButton = ({ children, type, blendMode, setBlendMode }) => (
+  <Button
+    onClick={() => setBlendMode(type)}
+    m={2}
+    size="sm"
+    variantColor="teal"
+    variant={blendMode === type ? 'solid' : 'outline'}
+  >
+    {children}
+  </Button>
+);
+
+const BlendMode = (props) => {
   return (
     <Flex justifyContent="center">
-      <Button
-        m={2}
-        size="sm"
-        variantColor="teal"
-        variant={blendMode === 'multiply' ? 'solid' : 'outline'}
-        onClick={() => setBlendMode('multiply')}
-      >
+      <BlendModeButton type="multiply" {...props}>
         Multiply
-      </Button>
-      <Button
-        m={2}
-        size="sm"
-        variantColor="teal"
-        variant={blendMode === 'darken' ? 'solid' : 'outline'}
-        onClick={() => setBlendMode('darken')}
-      >
+      </BlendModeButton>
+      <BlendModeButton type="darken" {...props}>
         Darken
-      </Button>
-      <Button
-        m={2}
-        size="sm"
-        variantColor="teal"
-        variant={blendMode === 'lighten' ? 'solid' : 'outline'}
-        onClick={() => setBlendMode('lighten')}
-      >
+      </BlendModeButton>
+      <BlendModeButton type="lighten" {...props}>
         Lighten
-      </Button>
+      </BlendModeButton>
     </Flex>
   );
 };
