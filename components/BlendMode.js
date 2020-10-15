@@ -15,14 +15,14 @@ const BlendModeButton = ({ children, type, blendMode, setBlendMode }) => (
 const BlendMode = (props) => {
   return (
     <Flex justifyContent="center">
-      <BlendModeButton type="multiply" {...props}>
-        Multiply
-      </BlendModeButton>
       <BlendModeButton type="darken" {...props}>
         Darken
       </BlendModeButton>
       <BlendModeButton type="lighten" {...props}>
         Lighten
+      </BlendModeButton>
+      <BlendModeButton type="multiply" {...props}>
+        Multiply
       </BlendModeButton>
     </Flex>
   );
