@@ -9,15 +9,14 @@ const ContrastControl = ({ contrast, setContrast }) => {
   return (
     <Slider
       onChange={(value) => setContrast(value)}
-      color="pink"
       defaultValue={contrast}
       size="lg"
       min="0"
       max="1"
       step="0.05"
     >
-      <SliderTrack />
-      <SliderFilledTrack />
+      <SliderTrack bg="teal.800" />
+      <SliderFilledTrack bg="teal.400" />
       <SliderThumb size={6} />
     </Slider>
   );
