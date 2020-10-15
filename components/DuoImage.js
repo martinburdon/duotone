@@ -22,7 +22,7 @@ const StyledImage = styled(Image)`
   mix-blend-mode: ${(props) => props.blendMode};
 `;
 
-const DuoImage = ({ src, color1, color2, contrast = 1, blendMode }) => {
+const DuoImage = ({ src, color1, color2, contrast, blendMode }) => {
   return (
     <Flex justifyContent="center">
       <StyledContainer color1={color1} color2={color2} justifyContent="center">

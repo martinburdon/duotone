@@ -10,6 +10,7 @@ export default function Home() {
   const [color1, setColor1] = useState('#f32959');
   const [color2, setColor2] = useState('#1d3162');
   const [blendMode, setBlendMode] = useState('darken');
+  const [contrast, setContrast] = useState(1);
 
   return (
     <Grid
@@ -25,6 +26,7 @@ export default function Home() {
           blendMode={blendMode}
           color1={color1}
           color2={color2}
+          contrast={contrast}
           src={imageSrc}
         />
         <Options
@@ -34,6 +36,8 @@ export default function Home() {
           setColor1={setColor1}
           color2={color2}
           setColor2={setColor2}
+          contrast={contrast}
+          setContrast={setContrast}
         />
       </Flex>
     </Grid>
