@@ -12,11 +12,10 @@ const ColorPicker = ({ color, onChange }) => {
   };
 
   return (
-    <Stack m={4} pos="relative">
+    <Stack pos="relative" w="100%">
       <Flex
         alignItems="center"
         backgroundColor={color}
-        borderRadius="10px"
         color={textColor}
         cursor="pointer"
         justifyContent="center"
@@ -26,7 +25,12 @@ const ColorPicker = ({ color, onChange }) => {
         {color}
       </Flex>
       {isPickerOpen && (
-        <Flex position="absolute" onClick={onSwatchClick}>
+        <Flex
+          position="absolute"
+          onClick={onSwatchClick}
+          top="100%"
+          zIndex="100"
+        >
           <Box position="fixed" top="0" right="0" bottom="0" left="0" />
           <ChromePicker disableAlpha color={color} onChange={onChange} />
         </Flex>

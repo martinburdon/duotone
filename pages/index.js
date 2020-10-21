@@ -15,22 +15,21 @@ export default function Home() {
   const [contrast, setContrast] = useState(1);
 
   return (
-    <Grid
-      className="wrapper"
-      templateColumns="minmax(20px, 1fr) minmax(auto, 600px) minmax(20px, 1fr)"
-    >
-      <Flex m="2rem 0" justifyContent="center">
+    <Flex direction="column">
+      <Flex m="2rem 0" paddingX={8} justifyContent="center">
         <Heading as="h1">Duotone</Heading>
       </Flex>
-      <Flex flexDirection="column">
-        <ImageSrc imageSrc={imageSrc} setImageSrc={setImageSrc} />
-        <DuoImage
-          blendMode={blendMode}
-          color1={color1}
-          color2={color2}
-          contrast={contrast}
-          src={imageSrc}
-        />
+      <Flex paddingX={8} flexDirection="column" alignItems="center">
+        <Flex direction="column">
+          <ImageSrc imageSrc={imageSrc} setImageSrc={setImageSrc} />
+          <DuoImage
+            blendMode={blendMode}
+            color1={color1}
+            color2={color2}
+            contrast={contrast}
+            src={imageSrc}
+          />
+        </Flex>
         <Options
           blendMode={blendMode}
           setBlendMode={setBlendMode}
@@ -43,6 +42,6 @@ export default function Home() {
         />
       </Flex>
       <Footer />
-    </Grid>
+    </Flex>
   );
 }

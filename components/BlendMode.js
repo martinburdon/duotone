@@ -1,9 +1,8 @@
-import { Button, Flex } from '@chakra-ui/core';
+import { Button, Stack } from '@chakra-ui/core';
 
 const BlendModeButton = ({ children, type, blendMode, setBlendMode }) => (
   <Button
     onClick={() => setBlendMode(type)}
-    m={2}
     size="sm"
     variantColor="teal"
     variant={blendMode === type ? 'solid' : 'outline'}
@@ -14,7 +13,7 @@ const BlendModeButton = ({ children, type, blendMode, setBlendMode }) => (
 
 const BlendMode = (props) => {
   return (
-    <Flex justifyContent="center">
+    <Stack isInline spacing={0} shouldWrapChildren>
       <BlendModeButton type="darken" {...props}>
         Darken
       </BlendModeButton>
@@ -24,7 +23,7 @@ const BlendMode = (props) => {
       <BlendModeButton type="multiply" {...props}>
         Multiply
       </BlendModeButton>
-    </Flex>
+    </Stack>
   );
 };
 
