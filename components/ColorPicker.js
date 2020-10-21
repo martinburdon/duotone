@@ -1,4 +1,4 @@
-const { Flex, Box } = require('@chakra-ui/core');
+const { Box, Flex, Stack } = require('@chakra-ui/core');
 import { getContrastingColor } from '@/utils/helpers';
 import { useState } from 'react';
 import { ChromePicker } from 'react-color';
@@ -12,37 +12,26 @@ const ColorPicker = ({ color, onChange }) => {
   };
 
   return (
-    <Flex flexDirection="column" m={4}>
+    <Stack m={4} pos="relative">
       <Flex
         alignItems="center"
         backgroundColor={color}
-        borderRadius="300px"
+        borderRadius="10px"
         color={textColor}
         cursor="pointer"
-        h="100px"
         justifyContent="center"
+        p={4}
         onClick={onSwatchClick}
-        w="100px"
       >
         {color}
       </Flex>
       {isPickerOpen && (
-        <Flex
-          position="fixed"
-          top="0"
-          right="0"
-          bottom="0"
-          left="0"
-          alignItems="center"
-          justifyContent="center"
-          onClick={onSwatchClick}
-        >
-          <Box position="absolute">
-            <ChromePicker disableAlpha color={color} onChange={onChange} />
-          </Box>
+        <Flex position="absolute" onClick={onSwatchClick}>
+          <Box position="fixed" top="0" right="0" bottom="0" left="0" />
+          <ChromePicker disableAlpha color={color} onChange={onChange} />
         </Flex>
       )}
-    </Flex>
+    </Stack>
   );
 };
 

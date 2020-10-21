@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { ThemeProvider, CSSReset } from '@chakra-ui/core';
+import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core';
 import { Global, css } from '@emotion/core';
 
 import customTheme from '@/styles/theme';
@@ -43,8 +43,11 @@ const GlobalStyle = ({ children }) => {
 function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={customTheme}>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <ColorModeProvider value="dark">
+        <GlobalStyle>
+          <Component {...pageProps} />
+        </GlobalStyle>
+      </ColorModeProvider>
     </ThemeProvider>
   );
 }

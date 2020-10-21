@@ -1,11 +1,13 @@
 import DuoImage from '@/components/DuoImage';
+import Footer from '@/components/Footer';
 import ImageSrc from '@/components/ImageSrc';
 import Options from '@/components/Options';
 import { Flex, Grid, Heading } from '@chakra-ui/core';
 import { useState } from 'react';
+
 export default function Home() {
   const [imageSrc, setImageSrc] = useState(
-    'https://i.scdn.co/image/ab67616d00001e028b52c6b9bc4e43d873869699'
+    'https://i.scdn.co/image/ab67616d00001e02fce23dadb51975ebf2e9d75c'
   );
   const [color1, setColor1] = useState('#f32959');
   const [color2, setColor2] = useState('#1d3162');
@@ -40,6 +42,7 @@ export default function Home() {
           setContrast={setContrast}
         />
       </Flex>
+      <Footer />
     </Grid>
   );
 }
