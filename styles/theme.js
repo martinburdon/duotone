@@ -13,6 +13,7 @@ const theme = {
     medium: 600,
     bold: 700
   },
+  breakpoints: ['340px'],
   colors: {
     ...chakraTheme.colors,
     gray: {

@@ -25,10 +25,21 @@ const Options = ({
       w="100%"
     >
       <Stack>
-        <Text>Fills</Text>
-        <Flex borderRadius={8} overflow="hidden">
-          <ColorPicker color={color1} onChange={onChangeColor1} />
-          <ColorPicker color={color2} onChange={onChangeColor2} />
+        <Flex
+          justifyContent="space-between"
+          direction={['column', 'row']}
+          w="100%"
+        >
+          <ColorPicker
+            label="Fill 1"
+            color={color1}
+            onChange={onChangeColor1}
+          />
+          <ColorPicker
+            label="Fill 2"
+            color={color2}
+            onChange={onChangeColor2}
+          />
         </Flex>
       </Stack>
       <BlendMode blendMode={blendMode} setBlendMode={setBlendMode} />
