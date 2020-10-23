@@ -1,28 +1,44 @@
-import { Button, Stack } from '@chakra-ui/core';
+import { Button, RadioButtonGroup, Stack, Text } from '@chakra-ui/core';
 
-const BlendModeButton = ({ children, type, blendMode, setBlendMode }) => (
-  <Button
-    onClick={() => setBlendMode(type)}
-    size="sm"
-    variantColor="teal"
-    variant={blendMode === type ? 'solid' : 'outline'}
-  >
-    {children}
-  </Button>
-);
+const CustomRadio = React.forwardRef((props, ref) => {
+  const { isChecked, isDisabled, value, ...rest } = props;
 
-const BlendMode = (props) => {
   return (
-    <Stack isInline spacing={0} shouldWrapChildren>
-      <BlendModeButton type="darken" {...props}>
-        Darken
-      </BlendModeButton>
-      <BlendModeButton type="lighten" {...props}>
-        Lighten
-      </BlendModeButton>
-      <BlendModeButton type="multiply" {...props}>
-        Multiply
-      </BlendModeButton>
+    <Button
+      ref={ref}
+      variantColor="teal"
+      variant={isChecked ? 'solid' : 'outline'}
+      aria-checked={isChecked}
+      role="radio"
+      isDisabled={isDisabled}
+      {...rest}
+      mr="0"
+      px="0"
+      w="100%"
+    />
+  );
+});
+
+const BlendMode = ({ blendMode, setBlendMode }) => {
+  return (
+    <Stack>
+      <Text>Blend Mode</Text>
+      <RadioButtonGroup
+        onChange={(val) => setBlendMode(val)}
+        value={blendMode}
+        isInline
+        display="flex"
+      >
+        <CustomRadio roundedLeft={8} roundedRight="0" value="darken">
+          Darken
+        </CustomRadio>
+        <CustomRadio borderRadius="0" borderX="none" value="lighten">
+          Lighten
+        </CustomRadio>
+        <CustomRadio roundedLeft="0" roundedRight={8} value="multiply">
+          Multiply
+        </CustomRadio>
+      </RadioButtonGroup>
     </Stack>
   );
 };

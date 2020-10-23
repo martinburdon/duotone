@@ -1,4 +1,4 @@
-const { Flex, Stack } = require('@chakra-ui/core');
+const { Flex, Stack, Text } = require('@chakra-ui/core');
 import BlendMode from './BlendMode';
 import ColorPicker from './ColorPicker';
 import ContrastControl from './ContrastControl';
@@ -24,10 +24,13 @@ const Options = ({
       maxW="300px"
       w="100%"
     >
-      <Flex borderRadius={8} overflow="hidden">
-        <ColorPicker color={color1} onChange={onChangeColor1} />
-        <ColorPicker color={color2} onChange={onChangeColor2} />
-      </Flex>
+      <Stack>
+        <Text>Fills</Text>
+        <Flex borderRadius={8} overflow="hidden">
+          <ColorPicker color={color1} onChange={onChangeColor1} />
+          <ColorPicker color={color2} onChange={onChangeColor2} />
+        </Flex>
+      </Stack>
       <BlendMode blendMode={blendMode} setBlendMode={setBlendMode} />
       <ContrastControl contrast={contrast} setContrast={setContrast} />
     </Stack>
