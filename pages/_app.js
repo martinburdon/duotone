@@ -33,6 +33,16 @@ const GlobalStyle = ({ children }) => {
             grid-column: 1 / 4;
             width: 100%;
           }
+
+          input:focus {
+            border-color: #19e6b6 !important;
+            box-shadow: 0 0 0 1px #19e6b6 !important;
+          }
+
+          ::selection {
+            background-color: #29ffc4;
+            color: #004d4d;
+          }
         `}
       />
       {children}

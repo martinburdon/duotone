@@ -2,7 +2,7 @@ import DuoImage from '@/components/DuoImage';
 import Footer from '@/components/Footer';
 import ImageSrc from '@/components/ImageSrc';
 import Options from '@/components/Options';
-import { Flex, Grid, Heading } from '@chakra-ui/core';
+import { Flex, Heading } from '@chakra-ui/core';
 import { useState } from 'react';
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
         <Heading as="h1">Duotone</Heading>
       </Flex>
       <Flex paddingX={8} flexDirection="column" alignItems="center">
-        <Flex direction="column">
+        <Flex flexDirection="column" alignItems="center" maxW="500px" w="100%">
           <ImageSrc imageSrc={imageSrc} setImageSrc={setImageSrc} />
           <DuoImage
             blendMode={blendMode}
@@ -29,17 +29,17 @@ export default function Home() {
             contrast={contrast}
             src={imageSrc}
           />
+          <Options
+            blendMode={blendMode}
+            setBlendMode={setBlendMode}
+            color1={color1}
+            setColor1={setColor1}
+            color2={color2}
+            setColor2={setColor2}
+            contrast={contrast}
+            setContrast={setContrast}
+          />
         </Flex>
-        <Options
-          blendMode={blendMode}
-          setBlendMode={setBlendMode}
-          color1={color1}
-          setColor1={setColor1}
-          color2={color2}
-          setColor2={setColor2}
-          contrast={contrast}
-          setContrast={setContrast}
-        />
       </Flex>
       <Footer />
     </Flex>
