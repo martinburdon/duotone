@@ -1,11 +1,17 @@
-const { Input, Text, Stack } = require('@chakra-ui/core');
+const {
+  Input,
+  InputGroup,
+  InputLeftAddon,
+  Text,
+  Stack
+} = require('@chakra-ui/core');
 
 const ImageUrl = ({ imageSrc, setImageSrc }) => {
   const handleChange = (event) => setImageSrc(event.target.value);
 
   return (
-    <Stack mb={4} w="100%">
-      <Text>Select image</Text>
+    <InputGroup mb={4} w="100%">
+      <InputLeftAddon children="URL" />
       <Input
         backgroundColor="gray.800"
         borderColor="gray.700"
@@ -14,7 +20,7 @@ const ImageUrl = ({ imageSrc, setImageSrc }) => {
         onFocus={(e) => e.target.select()}
         placeholder="Pick image"
       />
-    </Stack>
+    </InputGroup>
   );
 };
 

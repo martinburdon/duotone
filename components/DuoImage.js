@@ -1,4 +1,4 @@
-import { Box, Flex, Image } from '@chakra-ui/core';
+import { Flex, Image } from '@chakra-ui/core';
 import styled from '@emotion/styled';
 
 const StyledContainer = styled(Flex)`

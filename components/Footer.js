@@ -1,4 +1,21 @@
-import { Flex, IconButton, Link, Stack, Text } from '@chakra-ui/core';
+import { IconButton, Link, Stack } from '@chakra-ui/core';
+import styled from '@emotion/styled';
+
+const TextLink = styled.a`
+  transition: color 0.5s ease, text-shadow 0.5s ease;
+
+  &:hover {
+    color: #29ffc4;
+    text-shadow: 0 0 8px #80ffce;
+  }
+`;
+
+const SocialButton = styled(IconButton)`
+  &:hover {
+    background: transparent;
+    color: #29ffc4;
+  }
+`;
 
 const Footer = () => (
   <Stack
@@ -9,10 +26,10 @@ const Footer = () => (
     padding={8}
     paddingTop={32}
   >
-    <a href="https://martinburdon.co.uk">Made by Martin</a>
+    <TextLink href="https://martinburdon.co.uk">Made by Martin</TextLink>
     <Stack isInline>
       <Link href="https://twitter.com/martin870" title="Twitter" isExternal>
-        <IconButton
+        <SocialButton
           aria-label="Twitter"
           icon="twitter"
           size="lg"
@@ -21,7 +38,7 @@ const Footer = () => (
         />
       </Link>
       <Link href="https://github.com/martinburdon" title="GitHub" isExternal>
-        <IconButton
+        <SocialButton
           aria-label="GitHub"
           icon="github"
           size="lg"
@@ -30,7 +47,7 @@ const Footer = () => (
         />
       </Link>
       <Link href="mailto:martin@martinburdon.co.uk" title="Email" isExternal>
-        <IconButton
+        <SocialButton
           aria-label="Email"
           icon="mail"
           size="lg"
