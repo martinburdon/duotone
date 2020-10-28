@@ -24,13 +24,15 @@ const ColorPicker = ({ color, onChange, label }) => {
         <Box backgroundColor={color} borderRadius={8} h="44px" w="44px"></Box>
       </Flex>
       {isPickerOpen && (
-        <Flex
-          position="absolute"
-          onClick={onSwatchClick}
-          top="100%"
-          zIndex="100"
-        >
-          <Box position="fixed" top="0" right="0" bottom="0" left="0" />
+        <Flex position="absolute" top="100%" zIndex="100">
+          <Box
+            position="fixed"
+            top="0"
+            right="0"
+            bottom="0"
+            left="0"
+            onClick={onSwatchClick}
+          />
           <ChromePicker disableAlpha color={color} onChange={onChange} />
         </Flex>
       )}
