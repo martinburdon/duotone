@@ -2,15 +2,17 @@ import DuoImage from '@/components/DuoImage';
 import Footer from '@/components/Footer';
 import ImageSrc from '@/components/ImageSrc';
 import Options from '@/components/Options';
+import Presets from '@/components/Presets';
 import { Flex, Heading } from '@chakra-ui/core';
 import { useState } from 'react';
 
 export default function Home() {
   const [imageSrc, setImageSrc] = useState(
-    'https://i.scdn.co/image/ab67616d00001e02fce23dadb51975ebf2e9d75c'
+    'https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
   );
-  const [color1, setColor1] = useState('#f32959');
-  const [color2, setColor2] = useState('#1d3162');
+
+  const [color1, setColor1] = useState('#00e2ff');
+  const [color2, setColor2] = useState('#450084');
   const [blendMode, setBlendMode] = useState('darken');
   const [contrast, setContrast] = useState(1);
 
@@ -29,6 +31,7 @@ export default function Home() {
             contrast={contrast}
             src={imageSrc}
           />
+          <Presets setColor1={setColor1} setColor2={setColor2} />
           <Options
             blendMode={blendMode}
             setBlendMode={setBlendMode}

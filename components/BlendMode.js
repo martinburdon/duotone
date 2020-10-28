@@ -32,11 +32,11 @@ const BlendMode = ({ blendMode, setBlendMode }) => {
         <CustomRadio roundedLeft={8} roundedRight="0" value="darken">
           Darken
         </CustomRadio>
-        <CustomRadio borderRadius="0" borderX="none" value="lighten">
-          Lighten
-        </CustomRadio>
-        <CustomRadio roundedLeft="0" roundedRight={8} value="multiply">
+        <CustomRadio borderRadius="0" borderX="none" value="multiply">
           Multiply
+        </CustomRadio>
+        <CustomRadio roundedLeft="0" roundedRight={8} value="lighten">
+          Lighten
         </CustomRadio>
       </RadioButtonGroup>
     </Stack>
