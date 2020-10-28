@@ -1,10 +1,4 @@
-const {
-  Input,
-  InputGroup,
-  InputLeftAddon,
-  Text,
-  Stack
-} = require('@chakra-ui/core');
+const { Input, InputGroup, InputLeftAddon } = require('@chakra-ui/core');
 
 const ImageUrl = ({ imageSrc, setImageSrc }) => {
   const handleChange = (event) => setImageSrc(event.target.value);

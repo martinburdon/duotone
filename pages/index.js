@@ -1,3 +1,4 @@
+import Download from '@/components/Download';
 import DuoImage from '@/components/DuoImage';
 import Footer from '@/components/Footer';
 import ImageSrc from '@/components/ImageSrc';
@@ -23,7 +24,10 @@ export default function Home() {
       </Flex>
       <Flex paddingX={8} flexDirection="column" alignItems="center">
         <Flex flexDirection="column" alignItems="center" maxW="500px" w="100%">
-          <ImageSrc imageSrc={imageSrc} setImageSrc={setImageSrc} />
+          <Flex w="100%">
+            <ImageSrc imageSrc={imageSrc} setImageSrc={setImageSrc} />
+            <Download imageSrc={imageSrc} color1={color1} color2={color2} />
+          </Flex>
           <DuoImage
             blendMode={blendMode}
             color1={color1}

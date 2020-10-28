@@ -3,6 +3,7 @@ import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core';
 import { Global, css } from '@emotion/core';
 
 import customTheme from '@/styles/theme';
+import '@/styles/prism.css';
 
 const GlobalStyle = ({ children }) => {
   return (
@@ -18,7 +19,7 @@ const GlobalStyle = ({ children }) => {
           }
 
           #__next {
-            background: #090c14;
+            background: #0d121c;
             color: #fff;
             display: flex;
             flex-direction: column;
