@@ -2,7 +2,7 @@ import Prism from 'prismjs';
 import { useEffect, useState } from 'react';
 import dedent from 'dedent';
 const { Collapse, Button, Stack } = require('@chakra-ui/core');
-import { copyToClipboard } from '@/utils/helpers';
+import copy from 'copy-to-clipboard';
 
 const Code = ({ language, children }) => {
   useEffect(() => {
@@ -21,7 +21,7 @@ const Code = ({ language, children }) => {
         <Button
           variantColor="teal"
           ml="auto"
-          onClick={() => copyToClipboard(formattedCode)}
+          onClick={() => copy(formattedCode)}
           size="xs"
         >
           Copy to clipboard
