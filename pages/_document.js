@@ -6,11 +6,11 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <title>Duotone - Generate CSS for duotone images</title>
-          <description>
+          <meta name="description">
             Generate a Duotone image, the style popularised by Spotify. Choose
             from presets or define your own custom colours before downloading
             the CSS to use on your own site.
-          </description>
+          </meta>
           <link
             rel="apple-touch-icon"
             sizes="57x57"
