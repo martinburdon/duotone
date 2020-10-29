@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Duotone - Generate CSS for duotone images</title>
           <meta
             name="description"
             content="Generate a Duotone image, the style popularised by Spotify. Choose from presets or define your own custom colours before downloading the CSS to use on your own site."

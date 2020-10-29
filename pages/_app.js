@@ -9,6 +9,7 @@ const GlobalStyle = ({ children }) => {
   return (
     <>
       <Head>
+        <title>Duotone - Generate CSS for duotone images</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <CSSReset />
