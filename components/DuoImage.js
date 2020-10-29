@@ -26,7 +26,12 @@ const DuoImage = ({ src, color1, color2, contrast, blendMode }) => {
   return (
     <Flex justifyContent="center" marginBottom={8} maxW="500px">
       <StyledContainer color1={color1} color2={color2} justifyContent="center">
-        <StyledImage contrast={contrast} blendMode={blendMode} src={src} />
+        <StyledImage
+          alt="Src image"
+          contrast={contrast}
+          blendMode={blendMode}
+          src={src}
+        />
       </StyledContainer>
     </Flex>
   );
