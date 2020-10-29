@@ -8,7 +8,7 @@ const DuoButton = styled(Button)`
     ${(props) => props.fill1} 50%,
     ${(props) => props.fill2} 50%
   );
-  border-radius: 100%;
+  border-radius: 8px;
   height: 40px;
   width: 40px;
 
