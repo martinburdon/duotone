@@ -9,7 +9,8 @@ const {
   ModalHeader,
   ModalCloseButton,
   ModalBody,
-  ModalFooter
+  ModalFooter,
+  Stack
 } = require('@chakra-ui/core');
 import Code from '@/components/Code';
 
@@ -23,21 +24,22 @@ const Download = ({ imageSrc, color1, color2 }) => {
         icon="download"
         ml={4}
       />
-      <Modal isOpen={isOpen} onClose={onClose} size="wide">
+      <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Download</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Code language="html">
-              {`
-                <div class="duo-img">
-                  <img src="${imageSrc}" />
-                </div>
-              `}
-            </Code>
-            <Code language="css">
-              {`
+            <Stack shouldWrapChildren spacing={8}>
+              <Code language="html">
+                {`
+                  <div class="duo-img">
+                    <img src="${imageSrc}" />
+                  </div>
+                `}
+              </Code>
+              <Code language="css">
+                {`
                 .duo-img {
                   background: ${color1};
                   display: inline-flex;
@@ -61,7 +63,8 @@ const Download = ({ imageSrc, color1, color2 }) => {
                   width: 100%;
                 }
               `}
-            </Code>
+              </Code>
+            </Stack>
           </ModalBody>
           <ModalFooter>
             <Button onClick={onClose}>Close</Button>

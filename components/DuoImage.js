@@ -1,7 +1,7 @@
-import { Flex, Image } from '@chakra-ui/core';
+import { Box, Flex, Image } from '@chakra-ui/core';
 import styled from '@emotion/styled';
 
-const StyledContainer = styled(Flex)`
+const StyledContainer = styled(Box)`
   background: ${(props) => props.color1};
   position: relative;
 
