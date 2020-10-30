@@ -38,7 +38,7 @@ const Presets = (props) => {
   });
 
   return (
-    <SimpleGrid columns="5" spacing={8} mb={8}>
+    <SimpleGrid columns="5" spacing={6} mb={8}>
       {presetItems}
     </SimpleGrid>
   );

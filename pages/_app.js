@@ -3,7 +3,6 @@ import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core';
 import { Global, css } from '@emotion/core';
 
 import customTheme from '@/styles/theme';
-import '@/styles/prism.css';
 
 const GlobalStyle = ({ children }) => {
   return (

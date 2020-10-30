@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import dedent from 'dedent';
 const { Collapse, Button, Stack } = require('@chakra-ui/core');
 import copy from 'copy-to-clipboard';
+import 'prismjs/themes/prism-okaidia.css';
 
 const Code = ({ language, children }) => {
   useEffect(() => {

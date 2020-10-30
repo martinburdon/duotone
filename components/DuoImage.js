@@ -1,5 +1,6 @@
-import { Box, Flex, Image } from '@chakra-ui/core';
+import { Box, Flex } from '@chakra-ui/core';
 import styled from '@emotion/styled';
+import Image from 'next/image';
 
 const StyledContainer = styled(Box)`
   background: ${(props) => props.color1};
@@ -19,7 +20,7 @@ const StyledContainer = styled(Box)`
 
 const StyledImage = styled(Image)`
   filter: grayscale(100%) contrast(${(props) => props.contrast});
-  mix-blend-mode: ${(props) => props.blendMode};
+  mix-blend-mode: ${(props) => props.blendmode};
 `;
 
 const DuoImage = ({ src, color1, color2, contrast, blendMode }) => {
@@ -29,8 +30,9 @@ const DuoImage = ({ src, color1, color2, contrast, blendMode }) => {
         <StyledImage
           alt="Src image"
           contrast={contrast}
-          blendMode={blendMode}
+          blendmode={blendMode}
           src={src}
+          unsized
         />
       </StyledContainer>
     </Flex>
